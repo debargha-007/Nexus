@@ -1,0 +1,32 @@
+name: agentic-ai-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+
+  # Core LangChain and LangGraph libraries
+  - langchain-community
+  - langchain-core
+  - langchain-openai
+  - langgraph
+
+  # Data retrieval tools
+  - wikipedia
+
+  # Development and utilities
+  - notebook
+  - pip
+
+  - pip:
+      # Packages not available via conda-forge, or with extras
+      - langgraph-prebuilt
+      - pydantic
+      - openai
+      - openpyxl
+      - langgraph-sdk
+      - langgraph-checkpoint-sqlite
+      - langsmith
+      - trustcall
+      - "langgraph-cli[inmem]"
+      - tavily-python
